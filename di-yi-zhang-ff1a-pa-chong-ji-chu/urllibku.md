@@ -33,7 +33,7 @@ request.urlretrieve(http://www.baidu.com,baidu.html)
 
 ## urlencode函数：
 
-用浏览器发送请求的时候，如果url中包含中文或者其他特殊字符，那么浏览器会自动编码，如果使用代码发送请求，那么需要手动编码，这时候就需要用urlencode函数来实现，urlencode可以吧字典数据转换成URL编码数据。实例如下：
+用浏览器发送请求的时候，如果url中包含中文或者其他特殊字符，那么浏览器会自动编码，如果使用代码发送请求，那么需要手动编码，这时候就需要用`urlencode`函数来实现,`urlencode`可以吧字典数据转换成URL编码数据。实例如下：
 
 ```py
 from urllib import parse
