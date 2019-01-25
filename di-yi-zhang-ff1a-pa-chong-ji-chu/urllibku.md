@@ -26,7 +26,9 @@ urlretrieve函数可以方便的将网页上的一个文件保存到本地，以
 
 ```py
 from urllib import request
-request.urlretrieve(http://www.baidu.com,baidu.html)
+
+request.urlretrieve("http://www.baidu.com","baidu.html")
+#request.urlretrieve("URL","保存的文件格式")必须为这中格式，必须URL和保存的文件格式必须要加上""
 ```
 
 其中`http://www.baidu.com`是`url`，`baidu.html`是保存到本地的文件为`baidu.html`
@@ -37,6 +39,7 @@ request.urlretrieve(http://www.baidu.com,baidu.html)
 
 ```py
 from urllib import parse
+
 data = {name:"爬虫数据","greet":"Hello World","age":10}
 qs = parse.urlencode{data}
 print(qs)
@@ -48,6 +51,7 @@ print(qs)
 
 ```py
 from urllib import parse
+
 qs = "已经编码的URL"
 print(parse.parse_qs(qs))
 ```
