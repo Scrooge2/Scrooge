@@ -40,8 +40,8 @@ request.urlretrieve("http://www.baidu.com","baidu.html")
 ```py
 from urllib import parse
 
-data = {name:"爬虫数据","greet":"Hello World","age":10}
-qs = parse.urlencode{data}
+data = {"name":"爬虫数据","greet":"Hello World","age":10}
+qs = parse.urlencode(data)
 print(qs)
 ```
 
