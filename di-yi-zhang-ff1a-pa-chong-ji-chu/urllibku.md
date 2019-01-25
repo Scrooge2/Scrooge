@@ -40,6 +40,7 @@ request.urlretrieve("http://www.baidu.com","baidu.html")
 ```py
 from urllib import parse
 
+#data赋值的是一个数组需要用上大括号{}且数组中的元素需要使用""
 data = {"name":"爬虫数据","greet":"Hello World","age":10}
 qs = parse.urlencode(data)
 print(qs)
