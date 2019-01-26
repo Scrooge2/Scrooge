@@ -54,7 +54,28 @@ print(qs)
 from urllib import parse
 
 qs = "已经编码的URL"
-print(parse.parse_qs(qs))
+print(parse.parse_qs(qs)
+```
+
+## urlparse和urlsplit用法:
+
+有时候拿到一个url，想对这个url各个组成部分进行分割，那么这个时候就可以用urlparse和urlsplit进行分割操作了，实例如下：
+
+```py
+from urllib import parse
+
+url = "http://www.baidu.com/s?usernaem=Scrooge"
+#urlparse用法和urlsplit想法基本相同，urlparse可获取params属性，而urlsplit则获取不到。
+result = parse.urlparse(url)
+#urlparse用法和urlsplit想法基本相同，urlparse可获取params属性，而urlsplit则获取不到。
+#resul = parse.urlsplit(url)
+
+print("scheme",result.scheme)
+print("netloc",result.netloc)
+print("path",result.path)
+print("params"result.params)
+print("query",result.query)
+print("fragment",result.fragment)
 ```
 
 
