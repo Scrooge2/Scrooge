@@ -78,5 +78,29 @@ print("query",result.query)
 print("fragment",result.fragment)
 ```
 
+## request.Request类：
+
+```py
+from urllib import request
+from urllib import parse
+
+url = "需要爬取的地址链接"
+headers = {"user Agent":"浏览器的user Agent"           #根据浏览器审查的信息加入模仿人为操作
+
+           "Referer":"浏览器的Referer"           #根据浏览器审查的信息加入模仿人为操作
+
+           }
+data = {
+        "first" : "true",           #根据浏览器审查的信息加入模仿人为操作
+        "pn" : 1,           #根据浏览器审查的信息加入模仿人为操作
+        "kd" : "Python"           #根据浏览器审查的信息加入模仿人为操作
+
+        }
+ request = request.Request(url,headers = headers,data = parse.urlencode(data).encode("utf-8"),method = "POST")
+ resp = parse.urlencode(request)
+ 
+ print(resp.read().decode("utf-8"))
+```
+
 
 

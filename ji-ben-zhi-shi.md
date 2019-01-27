@@ -2,7 +2,7 @@
 
 ## 什么是http和https协议： {#什么是http和https协议：}
 
-HTTP协议：全称是`HyperText Transfer Protocol`，中文意思是超文本传输协议，是一种发布和接收HTML页面的方法。服务器端口号是`80`端口。 HTTPS协议：是HTTP协议的加密版本，在HTTP下加入了SSL层。服务器端口号是`443`端口。
+HTTP协议：全称是`Hyper Text Transfer Protocol`，中文意思是超文本传输协议，是一种发布和接收HTML页面的方法。服务器端口号是`80`端口。 HTTPS协议：是HTTP协议的加密版本，在HTTP下加入了SSL层。服务器端口号是`443`端口。
 
 ## 在浏览器中发送一个http请求的过程： {#在浏览器中发送一个http请求的过程：}
 
@@ -21,7 +21,6 @@ HTTP协议：全称是`HyperText Transfer Protocol`，中文意思是超文本�
 
 ```
     scheme://host:port/path/?query-string=xxx#anchor
-
 ```
 
 * **scheme**
