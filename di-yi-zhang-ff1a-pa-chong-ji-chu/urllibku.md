@@ -97,8 +97,8 @@ data = {
 
         }
  request = request.Request(url,headers = headers,data = parse.urlencode(data).encode("utf-8"),method = "POST")
- resp = parse.urlencode(request)
- 
+ resp = parse.urlencode(request)           # data = parse.urlencode(data).encode("utf-8") 通过parse.urlencode将data数据转码成浏览器可识别状态并用encode("utf-8")将转码后的记过变成bytes字节。method = "POST"表示请求方式是post方式。
+
  print(resp.read().decode("utf-8"))
 ```
 
