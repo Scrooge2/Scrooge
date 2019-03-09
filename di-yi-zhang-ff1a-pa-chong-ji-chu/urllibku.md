@@ -108,6 +108,7 @@ data = {
 from urlli import request
 
 url = "爬取的链接"    #确定爬取的链接，测试代理ip或本地ip有效性可用:“http:httpbin.org/ip”
+
 Handler = request.ProxyHandler({"http":"IP:port"})        #使用ProxyHandlerr传入代理构建一个Handler
 opener = request.build_opener(Handler)        #使用创建了的Handler构建一个opener
 resp = opener.open(url)        #使用opener发送一个请求
