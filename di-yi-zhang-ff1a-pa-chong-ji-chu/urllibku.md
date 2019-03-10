@@ -116,5 +116,25 @@ resp = opener.open(url)        #使用opener发送一个请求
 print =(resp.read())
 ```
 
+## **Cookie格式:**
+
+```
+Set-Cookie:NAME=VALUE:Expires:Max-age-DATE:Path=PATH:Domain:DOMAIN_NAME:SECURE
+```
+
+参数意义:
+
+> **NAME : cookie的名字**
+>
+> **VALUE : cookie的值**
+>
+> **Expires : cookie的过期时间**
+>
+> **Path : cookie作用的路径**
+>
+> **Domain : cookie作用的域名**
+>
+> **SECURE : 是否只在https协议下起作用**
+
 
 
