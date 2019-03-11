@@ -136,5 +136,27 @@ Set-Cookie:NAME=VALUE:Expires:Max-age-DATE:Path=PATH:Domain:DOMAIN_NAME:SECURE
 >
 > **SECURE : 是否只在https协议下起作用**
 
+## 使用cookielib库和HTTPookieProcessr登录:
+
+Cookie是指网站服务器为了辨别用户身份和进行Session跟踪而储存在用户浏览器上的文本文件，Cookie可以保持登录用户的信息到用户下次与服务器的对话。
+
+示例代码如下:
+
+```py
+from urllib import request
+
+Headers = {
+                "User-Agent" : "input",               #这里的input是浏览器登录网站的User-Agent
+                "Cookie" : "input"                #这里的input是访问网站的Cookie
+}
+
+url = "input"                #这里的input是访问的网站链接
+
+req = reque.Request(url,Headers = Headers)                #
+resp = request.urlopen(req)
+with open("input.html","w") as fp:                #这里的input是保存的html文件的名字
+    fp.write(resp.read().decode("utf-8"))            
+```
+
 
 
