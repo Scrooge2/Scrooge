@@ -1,8 +1,8 @@
-## **url库：**
+## **urllib库：**
 
-url库是Python中的一个基本库，可以模拟浏览器的行为，并且url的所有网络请求方法都被集成到`url.request`模块下面
+urlibl库是Python中的一个基本库，可以模拟浏览器的行为，并且url的所有网络请求方法都被集成到`url.request`模块下面
 
-## url库的引入方法：
+## urllib库的引入方法：
 
 ```py
 from urllib import request
@@ -155,7 +155,7 @@ url = "input"                #这里的input是访问的网站链接
 req = reque.Request(url,Headers = Headers)                #
 resp = request.urlopen(req)
 with open("input.html","w") as fp:                #这里的input是保存的html文件的名字
-    fp.write(resp.read().decode("utf-8"))            
+    fp.write(resp.read().decode("utf-8"))
 ```
 
 
