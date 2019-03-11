@@ -1,13 +1,14 @@
 ## **urllib库：**
 
-urlibl库是Python中的一个基本库，可以模拟浏览器的行为，并且url的所有网络请求方法都被集成到`url.request`模块下面
+urlibl库是Python中的一个基本库，可以模拟浏览器的行为，并且url的所有网络请求方法都被集成到`urllib.request`模块下面
 
-## urllib库的引入方法：
+## urllib库的urlopen函数:
 
 ```py
 from urllib import request
 
 url = ("http://www.baidu.com")
+
 resp = request.urlopen(url)
 print(resp.read())
 ```
@@ -40,8 +41,8 @@ request.urlretrieve("http://www.baidu.com","baidu.html")
 ```py
 from urllib import parse
 
-#data赋值的是一个数组需要用上大括号{}且数组中的元素需要使用""
-data = {"name":"爬虫数据","greet":"Hello World","age":10}
+data = {"name":"爬虫数据","greet":"Hello World","age":10}        #data赋值的是一个数组需要用上大括号{}且数组中的元素需要使用""
+
 qs = parse.urlencode(data)
 print(qs)
 ```
@@ -65,10 +66,12 @@ print(parse.parse_qs(qs)
 from urllib import parse
 
 url = "http://www.baidu.com/s?usernaem=Scrooge"
+
+result = parse.urlparse(url)        
 #urlparse用法和urlsplit想法基本相同，urlparse可获取params属性，而urlsplit则获取不到。
-result = parse.urlparse(url)
+
+#resul = parse.urlsplit(url)        
 #urlparse用法和urlsplit想法基本相同，urlparse可获取params属性，而urlsplit则获取不到。
-#resul = parse.urlsplit(url)
 
 print("scheme",result.scheme)
 print("netloc",result.netloc)
@@ -85,6 +88,7 @@ from urllib import request
 from urllib import parse
 
 url = "需要爬取的地址链接"
+
 headers = {"user Agent":"浏览器的user Agent"           #根据浏览器审查的信息加入模仿人为操作
 
            "Referer":"浏览器的Referer"           #根据浏览器审查的信息加入模仿人为操作
